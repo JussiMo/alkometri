@@ -2,15 +2,15 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [bottle, setBottle] = useState(1)
-  const [hour, setHour] = useState(1)
+  const [bottle, setBottle] = useState()
+  const [hour, setHour] = useState()
   const [weight, setWeight] = useState(89)
   const [gender, setGender] = useState('male')
   const [result, setResult] = useState(0)
 
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
   //const numbers = new Array(24).fill(null).map((_,i) => i+1)
- //mikähomma?
+ //pullot ja aika ei muutu?
   const calculate = () => {
     let alko = 0
     let litres = bottle * 0.33
@@ -29,6 +29,11 @@ function App() {
     console.log(grams)
     console.log(burning)
     console.log(hops)
+    console.log(bottle)
+    console.log(hour)
+    console.log(weight)
+    console.log(gender)
+    console.log(result)
     setResult(alko)
   }
   return (
