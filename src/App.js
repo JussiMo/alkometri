@@ -2,8 +2,31 @@ import {useState} from 'react';
 import './App.css';
 
 function App() {
+  //const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+  const numbers = new Array(24).fill(null).map((_,i) => i+1)
   return (
-
+    <div id="container">
+      <div>
+      <label>Bottles</label>
+      <select>
+        {
+          numbers.map(bottle => (
+            <option value={bottle}>{bottle} pulloa</option>
+          ))
+        }
+      </select>
+      </div>
+      <div>
+      <label>Time</label>
+      <select>
+        {
+          numbers.map(hour => (
+            <option value={hour}>{hour} tuntia</option>
+          ))
+        }
+      </select>
+      </div>
+    </div>
   );
 }
 
